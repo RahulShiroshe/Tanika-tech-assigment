@@ -8,6 +8,10 @@ const Search = ({ CartItem, LikeItem }) => {
     search.classList.toggle("active", window.scrollY > 100)
   })
   const [MobileMenu, setMobileMenu] = useState(false)
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
   return (
       <section className='search background'>
         <div className='container-h c_flex'>
@@ -15,11 +19,11 @@ const Search = ({ CartItem, LikeItem }) => {
             <a href='/'> <img src={logo} alt='' /></a>
           </div>
 
-          <div className='search-box f_flex'>
+          <form onSubmit={handleSubmit} className='search-box f_flex'>
             <i className='fa fa-search'></i>
             <input type='text' placeholder='Search...' />
-            <span>Search</span>
-          </div>
+            <button type="submit" ><span>Search</span></button>
+          </form>
           <div className='icon f_flex width'>
             <div className='user'>
               <Link to='/'>

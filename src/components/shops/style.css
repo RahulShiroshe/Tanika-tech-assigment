@@ -22,6 +22,17 @@
 
 }
 
+.fa-heart:active {
+  content: "\f004";
+  color: rgb(184, 42, 70);
+}
+
+div.img{
+  display: flex;
+    justify-content: center;
+    height: 140px;
+}
+
 @media (min-width: 0px) {
   .shop .category {
     display: none;
